@@ -7,6 +7,118 @@
     <title>Builder</title>
 </head>
 <body>
-    <h1>Hello There This page is being constructed</h1>
+    <!-- Header of the page -->
+    <div class="header">
+
+    </div>
+
+    <!-- Chooseing main Components -->
+    <div class="builder-main"><h1>Choose The Main Components</h1></div>
+    <div class="builder-main">
+    <table class="t-builder-main">
+    <thead>
+        <tr>
+            <th>Component</th>
+            <th>Part</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>CPU</td>
+            <td><a href="/parts/{{ results['cpu']['itemnumber'] }}"></a></td>
+            <td></td>
+            <td><a href="/remove/cpu" class="btn btn-default btn-xs" role="button">Remove</a></td>
+            <td><a href="/cpu" class="btn btn-default btn-xs" role="button">Pick a CPU</a></td>
+        </tr>
+        <tr>
+            <td>Motherboard</td>
+            <td><a href="/parts/{{ results['mobo']['itemnumber'] }}"></a></td>
+            <td></td>
+            <td><a href="/remove/mobo" class="btn btn-default btn-xs" role="button">Remove</a></td>
+            <td><a href="/mobo" class="btn btn-default btn-xs" role="button">Pick a Motherboard</a></td>
+        </tr>
+        <tr>
+            <td>RAM</td>
+            <td><a href="/parts/{{ results['ram']['itemnumber'] }}"></a></td>
+            <td></td>
+            <td><a href="/remove/ram" class="btn btn-default btn-xs" role="button">Remove</a></td>
+            <td><a href="/ram" class="btn btn-default btn-xs" role="button">Pick some RAM</a></td>  
+        </tr>
+        <tr>
+            <td>HDD</td>
+            <td><a href="/parts/{{ results['hdd']['itemnumber'] }}"></a></td>
+            <td></td>
+            <td><a href="/remove/hdd" class="btn btn-default btn-xs" role="button">Remove</a></td>
+            <td><a href="/hdd" class="btn btn-default btn-xs" role="button">Pick a Hard Drive</a></td>
+        </tr>
+        <tr>
+            <td>SSD</td>
+            <td><a href="/parts/{{ results['ssd']['itemnumber'] }}"></a></td>
+            <td></td>
+            <td><a href="/remove/ssd" class="btn btn-default btn-xs" role="button">Remove</a></td>
+            <td><a href="/ssd" class="btn btn-default btn-xs" role="button">Pick a SSD</a></td>
+        </tr>
+        <tr>
+            <td>Graphics Card</td>
+            <td><a href="/parts/{{ results['gpu']['itemnumber'] }}"></a></td>
+            <td></td>
+            <td><a href="/remove/gpu" class="btn btn-default btn-xs" role="button">Remove</a></td>
+            <td><a href="/gpu" class="btn btn-default btn-xs" role="button">Pick a Graphics Card</a></td>
+        </tr>
+        <tr>
+            <td>Power Supply</td>
+            <td><a href="/parts/{{ results['psu']['itemnumber'] }}"></a></td>
+            <td></td>
+            <td><a href="/remove/psu" class="btn btn-default btn-xs" role="button">Remove</a></td>
+            <td><a href="/psu" class="btn btn-default btn-xs" role="button">Pick a Power Supply</a></td>
+        </tr>
+        <tr>
+            <td>Case</td>
+            <td><a href="/parts/{{ results['case']['itemnumber'] }}"></a></td>
+            <td></td>
+            <td><a href="/remove/case" class="btn btn-default btn-xs" role="button">Remove</a></td>
+            <td><a href="/case" class="btn btn-default btn-xs" role="button">Pick a Case</a></td>
+        </tr>
+        <tr>
+            <td>Total Price</td>
+            <td></td>
+            <td></td>
+            <td></td>
+      </tr>
+
+    </tbody>
+    </table>
+    </div>
+
+    <!-- Chooseing The Accessories -->
+    <div class="builder-accessorie"><h1>Choose The Accessories for Your PC</h1></div>
+    <div class="builder-accessorie">
+        <div class="part">
+            <div class="part-name">
+
+            </div>
+
+            <div class="choose-btn">
+
+            </div>
+
+            <div class="part-info">
+
+
+            </div>
+
+            <div class="remove-btn">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Header of the page -->
+    <div class="footer"><h1>Hello There This page is being constructed</h1></div>
+    <div class="footer">
+
+    </div>
 </body>
 </html>
