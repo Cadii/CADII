@@ -62,6 +62,57 @@
     <!-- End Register Form -->
 
     <!-- Firebase Connection -->
-   
+
+<script>
+		function validateForm() {
+			var username = document.forms["registration"]["username"].value;
+			var email = document.forms["registration"]["email"].value;
+			var password = document.forms["registration"]["password"].value;
+
+			if (username == "" || email == "" || password == "") {
+				document.getElementById("message").innerHTML = "<p class='error'>All fields are required.</p>";
+				return false;
+			}
+
+			return true;
+		}
+	</script>
+
+	<?php
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		$username = $_POST["username"];
+		$email = $_POST["email"];
+		$password = $_POST["password"];
+
+		// Hash the password
+		$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+		// Create a PDO connection to the database
+		$dsn = "mysql:host=localhost;dbname=mohamed2;charset=utf8mb4";
+		$db_username = "root";
+		$db_password = "";
+		$options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
+
+		try {
+			$pdo = new PDO($dsn, $db_username, $db_password, $options);
+
+			// Insert the user data into the database
+			$stmt = $pdo->prepare("INSERT INTO users (username, email, password) VALUES (:username, :email, :password)");
+			$stmt->execute(array(
+				":username" => $username,
+				":email" => $email,
+				":password" => $hashedPassword
+			));
+
+			echo "<p class='success'>Registration successful.</p>";
+		} catch(PDOException $e) {
+			echo "<p class='error'>Error: " . $e->getMessage() . "</p>";
+		}
+
+		// Close the database connection
+		$pdo = null;
+	}
+	?>
+    
 </body>
 </html>
