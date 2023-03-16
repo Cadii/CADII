@@ -1,0 +1,62 @@
+
+<?php
+session_start();
+
+// Check if the user is logged in
+if (!isset($_SESSION["user_id"])) {
+	header("Location: login form.php");
+	exit;
+}
+
+$user_id = $_SESSION["user_id"];
+$user_email = $_SESSION["user_email"];
+$user_name = $_SESSION["user_name"];
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builder</title>
+</head>
+<body>
+    <!-- Header of the page -->
+    <div class="header">
+
+    </div>
+
+    <!-- Chooseing main Components -->
+    <div class="builder-main"><h1>Choose The Main Components</h1>
+    </div>
+    
+    <!-- Chooseing The Accessories -->
+    <div class="builder-accessorie"><h1>Choose The Accessories for Your PC</h1></div>
+    <div class="builder-accessorie">
+        <div class="part">
+            <div class="part-name">
+
+            </div>
+
+            <div class="choose-btn">
+
+            </div>
+
+            <div class="part-info">
+
+
+            </div>
+
+            <div class="remove-btn">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Header of the page -->
+    <div class="footer">
+        <h1>Hello There This page is being constructed</h1>
+    </div>
+
+</body>
+</html>
