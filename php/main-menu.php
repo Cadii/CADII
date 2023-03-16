@@ -21,49 +21,42 @@
 </head>
 <body>
     <!-- Start header -->
-    <div class="header">
-        <div class="container">
-            <img class="logo" src="../images/Cadi Logo.png" alt="">
-            <div class="links">
-                <span class="icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
-                <!-- Start Unordered list  -->
-                <ul>
-                    <li><a href="../html/Builder.html">Builder 
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                    </a></li>
-                    <li><a href="../html/Build Guides.html">Build Guides
-                        <i class="fa-sharp fa-solid fa-book"></i>
-                    </a></li>
-                    <li><a href="../html/Completed Builds.html">Completed Builds
-                        <i class="fa-solid fa-computer"></i>
-                    </a></li>
-                    <li><a href="../html/contact.html">Contact
-                        <i class="fa-solid fa-envelope"></i>
-                    </a></li>
-                </ul>
-                <!-- End Unordered list  -->
-            </div>
+    <header>
+        <a href="../php/main-manu.php"  class="logo"><img src="../images/Cadi Logo.png" alt="Logo"></a>
+            <!-- Start Unordered list  -->
+            <ul class="navbar">
+                <li><a href="../php/Builder.php">Builder 
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                </a></li>
+                <li><a href="../php/Build Guides.php">Build Guides
+                    <i class="fa-sharp fa-solid fa-book"></i>
+                </a></li>
+                <li><a href="../php/Completed Builds.php">Completed Builds
+                    <i class="fa-solid fa-computer"></i>
+                </a></li>
+                <li><a href="../php/contact.php">Contact
+                    <i class="fa-solid fa-envelope"></i>
+                </a></li>
+            </ul>
+        <div class="main">
+            <a href="../php/Login Form.php" class="user"><i class="fa-solid fa-user"></i>Login</a>
+            <a href="../php/Registertion Form.php" class="user"><i class="fa-solid fa-user-plus"></i>Register</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
         </div>
-    </div>
+        <!--Start Search Bar-->
+        <div class="Search-Bar">
+            <form action="https://google.com/search" method="get" class="search">
+                <input type="text" class="input" placeholder="Search">
+                <button class="btn" type="button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+    <!--End Search Bar-->
+    </header>
     <!-- End header -->
     <!-- Start Landing Section -->
         <div class="landing">
-            <!-- Create Login and Register Forms -->
-            <div class="user">
-                <a href="../html/Login Form.html" class="login">Login
-                    <i class="fa-solid fa-user"></i>
-                </a>
-            </div>
-            <div class="user">
-                <a href="../html/Registertion Form.html" class="register">Register
-                    <i class="fa-solid fa-user-plus"></i>
-                </a>
-            </div>
-        <!-- End of Login and Register Forms -->
             <div class="intro-text">
                 <h1>Hello There</h1>
                 <p>We are Cadi  - Super Creative & Minimal Agency PC Builder Simulatior</p>
@@ -110,7 +103,7 @@
                             </h3>
                             <p>You will be assisted in choosing compatible components together in order to get the highest efficiency from this 
                                 computer and the best price suitable for you.</p>
-                            <a href="../html/Builder.html" class="buttons">The Builder
+                            <a href="../php/Builder.php" class="buttons">The Builder
                                 <i class="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
@@ -122,7 +115,7 @@
                                 Build Guides
                             </h3>
                             <p>Building your own PC and need ideas on where to get started? Explore our build guides which cover systems for a variety of use-cases and budgets.</p>
-                            <a href="../html/Build Guides.html" class="buttons">The Build Guides
+                            <a href="../php/Build Guides.php" class="buttons">The Build Guides
                                 <i class="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
@@ -137,7 +130,7 @@
                                 Completed Builds</h3>
                             <p>You can now try out the completed computer and give us your opinion about this computer 
                                 and about our components and your opinion on our help method.</p>
-                            <a href="../html/Completed Builds.html" class="buttons">The Completed_Builds
+                            <a href="../php/Completed Builds.php" class="buttons">The Completed_Builds
                                 <i class="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
@@ -148,7 +141,7 @@
                                 <i class="fa-solid fa-microchip"></i>
                                 Browse Products</h3>
                             <p>You can select and know all the components (such as the processor and motherboard) that you want from this list, and know their version and price.</p>
-                            <a href="../html/Browse prodects.html" class="buttons">Browse Products
+                            <a href="../php/Browse prodects.php" class="buttons">Browse Products
                                 <i class="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
@@ -167,7 +160,7 @@
             <div class="contact-content">
                 <div class="text">
                     <h3>Feel free to drop us a line at:</h3>
-                    <h3><a href="mailto:mo01127803892@gmail.com" class="email">Cadibuilder37@gmail.com</a></h3>
+                    <h3><a href="mailto:CADI.GITHUB@gmail.com" class="email">CADI.GITHUB@gmail.com</a></h3>
                     <p>Find Us On Social Networks
                         <i class="fa-brands fa-facebook"></i>
                         <i class="fa-brands fa-instagram"></i>
