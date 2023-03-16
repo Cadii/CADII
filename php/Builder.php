@@ -130,9 +130,8 @@ $user_name = $_SESSION["user_name"];
     </div>
 
     <!-- Header of the page -->
-    <div class="footer"><h1>Hello There This page is being constructed</h1></div>
     <div class="footer">
-
+        <h1>Hello There This page is being constructed</h1>
     </div>
 </body>
 </html>
