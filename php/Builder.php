@@ -12,6 +12,7 @@ $user_id = $_SESSION["user_id"];
 $user_email = $_SESSION["user_email"];
 $user_name = $_SESSION["user_name"];
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,17 +22,42 @@ $user_name = $_SESSION["user_name"];
     <title>Builder</title>
 </head>
 <body>
+<form method="post" action="logout.php">
+<input type="submit" name="logout" value="Logout">
+</form>
+</head>
+<body>
     <!-- Header of the page -->
     <div class="header">
 
     </div>
 
     <!-- Chooseing main Components -->
-    <div class="builder-main"><h1>Choose The Main Components</h1>
+    <div class="builder-main">
+        <h1>Choose The Main Components</h1>
+        <div class="part">
+            <div class="part-name">
+
+            </div>
+
+            <div class="choose-btn">
+
+            </div>
+
+            <div class="part-info">
+
+
+            </div>
+
+            <div class="remove-btn">
+
+            </div>
+        </div>
+        
     </div>
-    
+
     <!-- Chooseing The Accessories -->
-    <div class="builder-accessorie"><h1>Choose The Accessories for Your PC</h1></div>
+
     <div class="builder-accessorie">
         <div class="part">
             <div class="part-name">
@@ -54,9 +80,9 @@ $user_name = $_SESSION["user_name"];
     </div>
 
     <!-- Header of the page -->
+    <div class="footer"><h1>Hello There This page is being constructed</h1></div>
     <div class="footer">
-        <h1>Hello There This page is being constructed</h1>
-    </div>
 
+    </div>
 </body>
 </html>
