@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadi</title>
     <!-- Main Template CSS File -->
-    <link rel="stylesheet" href="../CADII/css/main-menu.css">
+    <link rel="stylesheet" href="../css/main-menu.css">
     <!-- Render All Elements Normally -->
     <link rel="stylesheet" href="../css/normalize.css">
     <!-- Font Awesome Library -->
@@ -23,11 +23,11 @@
 <body>
 <div id="menu">
     <div id="menu-items">
-        <a href="../CADII/html/main-menu.html"class="menu-item" >CADI Home</a>
-        <a href="../CADII/html/Builder.php" class="menu-item" >Builder</a>
-        <a href="../CADII/html/Completed Builds.html" class="menu-item" >Completed Builds</a>
-        <a href="../CADII/html/Build Guides.html" class="menu-item" >Build Guides</a>
-        <a href="../CADII/html/Contact.html" class="menu-item" >Contact Us</a>
+        <a href="../php/main-menu.php"class="menu-item" >CADI Home</a>
+        <a href="../php/Builder.php" class="menu-item" >Builder</a>
+        <a href="../php/Completed Builds.php" class="menu-item" >Completed Builds</a>
+        <a href="../php/Build Guides.php" class="menu-item" >Build Guides</a>
+        <a href="../php/Contact.php" class="menu-item" >Contact Us</a>
     </div>
     <div id="menu-background-pattern"></div>
     <div id="menu-background-image"></div>

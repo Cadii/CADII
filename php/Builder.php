@@ -1,17 +1,4 @@
 
-<?php
-session_start();
-
-// Check if the user is logged in
-if (!isset($_SESSION["user_id"])) {
-	header("Location: login form.php");
-	exit;
-}
-
-$user_id = $_SESSION["user_id"];
-$user_email = $_SESSION["user_email"];
-$user_name = $_SESSION["user_name"];
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +9,7 @@ $user_name = $_SESSION["user_name"];
     <title>Builder</title>
      <!-- Main Template CSS File -->
      <link rel="stylesheet" href="../css/Builder.css">
-     <link rel="stylesheet" href="../css/Cadi.css">
+     <!--<link rel="stylesheet" href="../css/Cadi.css">-->
     <!-- Render All Elements Normally -->
     <link rel="stylesheet" href="../css/normalize.css">
     <!-- Font Awesome Library -->
@@ -43,7 +30,7 @@ $user_name = $_SESSION["user_name"];
 <body>
     <!-- Start header -->
     <header>
-        <a href="../php/main-manu.php"  class="logo"><img src="../images/Cadi Logo.png" alt="Logo"></a>
+        <a href="../php/main-menu.php"  class="logo"><img src="../images/Cadi Logo.png" alt="Logo"></a>
             <!-- Start Unordered list  -->
             <ul class="navbar">
                 <li><a href="../php/Builder.php">Builder 
@@ -60,8 +47,8 @@ $user_name = $_SESSION["user_name"];
                 </a></li>
             </ul>
         <div class="main">
-            <a href="../php/Login Form.php" class="user"><i class="fa-solid fa-user"></i>Login</a>
-            <a href="../php/Registertion Form.php" class="user"><i class="fa-solid fa-user-plus"></i>Register</a>
+            <a href="../php/login.php" class="user"><i class="fa-solid fa-user"></i>Login</a>
+            <a href="../php/register.php" class="user"><i class="fa-solid fa-user-plus"></i>Register</a>
             <div class="bx bx-menu" id="menu-icon"></div>
         </div>
         <!--Start Search Bar-->
@@ -76,62 +63,260 @@ $user_name = $_SESSION["user_name"];
     <!--End Search Bar-->
     </header>
     <!-- End header -->
-
-    <!-- Header of the page -->
-    <div class="header">
-
+    <!-- Start Landing Section -->
+    <div class="landing">
+        <div class="intro-text">
+            <h1>Builder</h1>
+            <p>Lets start to build your own PC.</p>
+        </div>
     </div>
+    <!-- End Landing Section -->
 
     <!-- Chooseing main Components -->
+    <h1>Choose The Main Components</h1>
     <div class="builder-main">
-        <h1>Choose The Main Components</h1>
         <div class="part">
             <div class="part-name">
-
+                CPU:
             </div>
 
             <div class="choose-btn">
-
+                <button type="button">
+                    <a href="../php/Browse prodects.php">Choose a CPU</a>
+                </button>
             </div>
 
             <div class="part-info">
 
 
             </div>
-
             <div class="remove-btn">
-
+            <button type="button">Remove</button>
             </div>
         </div>
+            
+            <div class="part">
+                <div class="part-name">
+                    MotherBoard:
+                </div>
 
+                <div class="choose-btn">
+                    <button type="button">
+                        <a href="../php/Browse prodects.php">Choose a MotherBoard</a>
+                    </button>
+                </div>
+
+                <div class="part-info">
+
+
+                </div>
+                <div class="remove-btn">
+                <button type="button">Remove</button>
+                </div>
+            </div>
+            <div class="part">
+                <div class="part-name">
+                    GPU:
+                </div>
+
+                <div class="choose-btn">
+                    <button type="button">
+                        <a href="../php/Browse prodects.php">Choose a GPU</a>
+                    </button>
+                </div>
+
+                <div class="part-info">
+
+
+                </div>
+                <div class="remove-btn">
+                <button type="button">Remove</button>
+                </div>
+            </div>
+            <div class="part">
+                <div class="part-name">
+                    RAM:
+                </div>
+
+                <div class="choose-btn">
+                    <button type="button">
+                        <a href="../php/Browse prodects.php">Choose a RAM</a>
+                    </button>
+                </div>
+
+                <div class="part-info">
+
+
+                </div>
+                <div class="remove-btn">
+                <button type="button">Remove</button>
+                </div>
+            </div>
+            <div class="part">
+                <div class="part-name">
+                    Storage:
+                </div>
+
+                <div class="choose-btn">
+                    <button type="button">
+                        <a href="../php/Browse prodects.php">Choose a Storage</a>
+                    </button>
+                </div>
+
+                <div class="part-info">
+
+
+                </div>
+                <div class="remove-btn">
+                <button type="button">Remove</button>
+                </div>
+            </div>
+            <div class="part">
+                <div class="part-name">
+                    Power Supply:
+                </div>
+
+                <div class="choose-btn">
+                    <button type="button">
+                        <a href="../php/Browse prodects.php">Choose a Power Supply</a>
+                    </button>
+                </div>
+
+                <div class="part-info">
+
+
+                </div>
+                <div class="remove-btn">
+                <button type="button">Remove</button>
+                </div>
+            </div>
+            <div class="part">
+                <div class="part-name">
+                    Case:
+                </div>
+
+                <div class="choose-btn">
+                    <button type="button">
+                        <a href="../php/Browse prodects.php">Choose a Case</a>
+                    </button>
+                </div>
+
+                <div class="part-info">
+
+
+                </div>
+                <div class="remove-btn">
+                <button type="button">Remove</button>
+                </div>
+            </div>
+            <div class="part">
+                <div class="part-name">
+                    Monitor:
+                </div>
+
+                <div class="choose-btn">
+                    <button type="button">
+                        <a href="../php/Browse prodects.php">Choose a Monitor</a>
+                    </button>
+                </div>
+                <div class="part-info">
+
+
+                </div>
+                <div class="remove-btn">
+                <button type="button">Remove</button>
+                </div>
+            </div>
     </div>
 
     <!-- Chooseing The Accessories -->
-
+    <h1>Choose The Accessories</h1>
     <div class="builder-accessorie">
-        <div class="part">
-            <div class="part-name">
+    
+    
+            <div class="part">
+                <div class="part-name">
+                    KeyBoard:
+                </div>
 
+                <div class="choose-btn">
+                    <button type="button">
+                        <a href="../php/Browse prodects.php">Choose a KeyBoard</a>
+                    </button>
+                </div>
+
+                <div class="part-info">
+
+
+                </div>
+                <div class="remove-btn">
+                <button type="button">Remove</button>
+                </div>
             </div>
+            <div class="part">
+                <div class="part-name">
+                    Mouse:
+                </div>
 
-            <div class="choose-btn">
+                <div class="choose-btn">
+                    <button type="button">
+                        <a href="../php/Browse prodects.php">Choose a Mouse</a>
+                    </button>
+                </div>
 
+                <div class="part-info">
+
+
+                </div>
+                <div class="remove-btn">
+                <button type="button">Remove</button>
+                </div>
             </div>
+            <div class="part">
+                <div class="part-name">
+                    HeadPhones / Speakers:
+                </div>
 
-            <div class="part-info">
+                <div class="choose-btn">
+                    <button type="button">
+                        <a href="../php/Browse prodects.php">Choose a HeadPhones / Speakers</a>
+                    </button>
+                </div>
+
+                <div class="part-info">
 
 
+                </div>
+                <div class="remove-btn">
+                <button type="button">Remove</button>
+                </div>
             </div>
+            <div class="part">
+                <div class="part-name">
+                    Webcam:
+                </div>
 
-            <div class="remove-btn">
+                <div class="choose-btn">
+                    <button type="button">
+                        <a href="../php/Browse prodects.php">Choose a Webcam</a>
+                    </button>
+                </div>
 
+                <div class="part-info">
+
+
+                </div>
+                <div class="remove-btn">
+                <button type="button">Remove</button>
+                </div>
             </div>
-        </div>
     </div>
-
-    <!-- Header of the page -->
+<!-- Start Footer -->
     <div class="footer">
-        <h1>Hello There This page is being constructed</h1>
+        <p>© 2023 <span>Cadi</span> All Right Reserved.</p> 
+        <button onclick="totop()" class= "top">UP <i class="fa-solid fa-up-long"></i></button>
     </div>
+    <!-- End Footer -->
+    <script src="../JS/main.js"></script>
 </body>
 </html>

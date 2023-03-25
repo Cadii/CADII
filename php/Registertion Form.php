@@ -18,13 +18,13 @@
     rel="stylesheet">
     <!-- Add icon for website-->
     <link rel="icon" href="../images/Cadi Icon.icon">
-    <script src="../JS/Reg_link.js" defer></script>
+    
 </head>
 <body>
     <!-- Start Header -->
     <div class="container">
         <div class="header">
-            <a href="../html/main-menu.html" class="back"> <i class="fa-solid fa-backward"></i>
+            <a href="../php/main-menu.php" class="back"> <i class="fa-solid fa-backward"></i>
                 Back 
             </a>
             <img class="logo" src="../images/Logo of us.png" alt="">
@@ -45,17 +45,26 @@
                 <input type="password" class="input2" required name="password" id="password" minlength="8" maxlength="20"> <br> <br> 
                 
                 <label class="label1">Email</label>
-                <input type="email" placeholder="Email" class="input3" id="Email" name="email"> 
+                <input type="email" class="input3" id="Email" name="email"> <br> <br>
+                <label class="label1">City</label>
+                <input type="text" class="input5"> <br> <br> 
+                <label class="label1">Phone Number</label>
+                <input type="text" class="input6"> <br><br>
+                <label class="label1">Gender:</label> 
+            <!-- End of Labels and inputs -->
+            <!-- Start Radio button  -->
+                <input type="radio" name="gender" value="Male" class="inputl">
+                <label class="gender">Male</label>
+                <input type="radio" name="gender" value="Female" class="inputl">
+                <label class="gender">Female</label> <br><br>
+            <!-- End Radio button  -->
             <!-- End of Labels and inputs -->
                 <p class="para1">Note: An account activation email will be sent to the email address you provide.</p>
-                <br> 
-         
                 
-   
-                <p class="para2">By registering you consent to allow PCMaker to retain personal information consisting of your email address and IP addresses used to access the site</p>
+                <p class="para2">By registering you consent to allow Cadi to retain personal information consisting of your email address and IP addresses used to access the site</p>
                 <input type="submit" required class="buttons" value="Register" name="submit"> <br>
                 <h3 class="header3">Already a member?</h3> <br>
-                <a href="../html/Login Form.html" class="login">Login</a>
+                <a href="../php/Login Form.php" class="login">Login</a>
             </form>
         </div>
     </div>
@@ -68,8 +77,10 @@
 			var username = document.forms["registration"]["username"].value;
 			var email = document.forms["registration"]["email"].value;
 			var password = document.forms["registration"]["password"].value;
+            var phone = document.forms["registration"]["phone_number"].value;
+            var city = document.forms["registration"]["city"].value;
 
-			if (username == "" || email == "" || password == "") {
+			if (username == "" || email == "" || password == "" || phone == "" || city == "" ) {
 				document.getElementById("message").innerHTML = "<p class='error'>All fields are required.</p>";
 				return false;
 			}
@@ -83,25 +94,30 @@
 		$username = $_POST["username"];
 		$email = $_POST["email"];
 		$password = $_POST["password"];
+        $phone = $_POST["phone_number"];
+        $city = $_POST["city"];
 
 		// Hash the password
 		$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 		// Create a PDO connection to the database
-		$dsn = "mysql:host=localhost;dbname=mohamed2;charset=utf8mb4";
-		$db_username = "root";
-		$db_password = "";
+		$dsn = "mysql:host=localhost;dbname=id20451569_cadi_db;charset=utf8mb4";
+		$db_username = "id20451569_cadi";
+		$db_password = "qzpm_QZPM_10";
 		$options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 
 		try {
 			$pdo = new PDO($dsn, $db_username, $db_password, $options);
 
 			// Insert the user data into the database
-			$stmt = $pdo->prepare("INSERT INTO users (username, email, password) VALUES (:username, :email, :password)");
+			$stmt = $pdo->prepare("INSERT INTO users (username , email , password , phone_number , city) 
+            VALUES (:username , :email , :password , :phone , :city)");
 			$stmt->execute(array(
 				":username" => $username,
 				":email" => $email,
-				":password" => $hashedPassword
+				":password" => $hashedPassword ,
+                ":phone" => $phone,
+                ":city"=> $city
 			));
 
 			echo "<p class='success'>Registration successful.</p>";

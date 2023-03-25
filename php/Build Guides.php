@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,34 +25,61 @@
 </head>
 <body>
     <!-- Start header -->
-    <div class="header">
-        <div class="container">
-            <img class="logo" src="../images/Cadi Logo.png" alt="">
-            <div class="links">
-                <span class="icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
-                <!-- Start Unordered list  -->
-                <ul>
-                    <li><a href="../html/Builder.html">Builder 
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                    </a></li>
-                    <li><a href="..html/Build Guides.html">Build Guides
-                        <i class="fa-sharp fa-solid fa-book"></i>
-                    </a></li>
-                    <li><a href="../html/Completed Builds.html">Completed Builds
-                        <i class="fa-solid fa-computer"></i>
-                    </a></li>
-                    <li><a href="../html/contact.html">Contact
-                        <i class="fa-solid fa-envelope"></i>
-                    </a></li>
-                </ul>
-                <!-- End Unordered list  -->
+    <header>
+        <a href="../php/main-manu.php"  class="logo"><img src="../images/Cadi Logo.png" alt="Logo"></a>
+            <!-- Start Unordered list  -->
+            <ul class="navbar">
+                <li><a href="../php/Builder.php">Builder 
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                </a></li>
+                <li><a href="../php/Build Guides.php">Build Guides
+                    <i class="fa-sharp fa-solid fa-book"></i>
+                </a></li>
+                <li><a href="../php/Completed Builds.php">Completed Builds
+                    <i class="fa-solid fa-computer"></i>
+                </a></li>
+                <li><a href="../php/contact.php">Contact
+                    <i class="fa-solid fa-envelope"></i>
+                </a></li>
+            </ul>
+        <div class="main">
+            <?php
+            
+            // Check if the user is logged in
+            
+            if (isset($_SESSION["user_id"]) && isset($_SESSION["user_name"])) {
+                // If the user is logged in, hide the Login and Register links
+                echo 'Welcome :' . $_SESSION["user_name"] . '<br>';
+                
+            ?>
+            <div class="bx bx-menu" id="menu-icon">
+                
+                 <a href="../php/logout.php" class="user"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+                
+                
             </div>
+            <?php
+            } else {
+                // If the user is not logged in, display the Login and Register links
+            ?>
+            <a href="../php/login.php" class="user"><i class="fa-solid fa-user"></i>Login</a>
+            <a href="../php/register.php" class="user"><i class="fa-solid fa-user-plus"></i>Register</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+            <?php
+            }
+            ?>
         </div>
-    </div>
+        <!--Start Search Bar-->
+        <div class="Search-Bar">
+            <form action="https://google.com/search" method="get" class="search">
+                <input type="text" class="input" placeholder="Search">
+                <button class="btn" type="button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+    <!--End Search Bar-->
+    </header>
     <!-- End header -->
     <!-- Start Landing Section -->
     <div class="landing">
@@ -73,28 +104,28 @@
     <div class="components">
         <div class="container">
             <div class="feat">
-                <h3><a href="#CPU" class="link">Central Processing Unit</a></h3>
-                <p><img src="../images/cpu2.jpg" alt="CPU" class="img"> </p>
+                <h3><a href="../php/cpu.php" class="link">Central Processing Unit</a></h3>
+                <a href="../php/cpu.php" class="link"><img src="../images/cpu2.jpg" alt="CPU" class="img_l"></a>
             </div>
             <div class="feat">
-                <h3><a href="#CPU" class="link">Graphics Processing Unit</a></h3>
-                <p><img src="../images//gpu2.jpg" alt="GPU" class="img"> </p>
+                <h3><a href="../php/gpu.php" class="link">Graphics Processing Unit</a></h3>
+                <p><img src="../images//gpu2.jpg" alt="GPU" class="img_l"> </p>
             </div>
             <div class="feat">
-                <h3><a href="#CPU" class="link">Motherboard</a></h3>
-                <p><img src="../images/motherboard.png" alt="CPU" class="img"> </p>
+                <h3><a href="../php/motherboard.php" class="link">Motherboard</a></h3>
+                <p><img src="../images/motherboard.png" alt="CPU" class="img_l"> </p>
             </div>
             <div class="feat">
-                <h3><a href="#CPU" class="link">Case</a></h3>
-                <p><img src="../images/case2.jpg" alt="CPU" class="img"> </p>
+                <h3><a href="../php/case.php" class="link">Case</a></h3>
+                <p><img src="../images/case2.jpg" alt="CPU" class="img_l"> </p>
             </div>
             <div class="feat">
-                <h3><a href="#CPU" class="link">Memory</a></h3>
-                <p><img src="../images/ram.jpg" alt="CPU" class="img"> </p>
+                <h3><a href="../php/memory.php" class="link">Memory</a></h3>
+                <p><img src="../images/ram.jpg" alt="CPU" class="img_l"> </p>
             </div>
             <div class="feat">
-                <h3><a href="#CPU" class="link">Storage</a></h3>
-                <p><img src="../images/ssd.jpg" alt="CPU" class="img"> </p>
+                <h3><a href="../php/storage.php" class="link">Storage</a></h3>
+                <p><img src="../images/ssd.jpg" alt="CPU" class="img_l"> </p>
             </div>
         </div>
     </div>

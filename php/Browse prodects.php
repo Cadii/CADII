@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,9 +44,31 @@
                 </a></li>
             </ul>
         <div class="main">
-            <a href="../php/Login Form.php" class="user"><i class="fa-solid fa-user"></i>Login</a>
-            <a href="../php/Registertion Form.php" class="user"><i class="fa-solid fa-user-plus"></i>Register</a>
+            <?php
+            
+            // Check if the user is logged in
+            
+            if (isset($_SESSION["user_id"]) && isset($_SESSION["user_name"])) {
+                // If the user is logged in, hide the Login and Register links
+                echo 'Welcome :' . $_SESSION["user_name"] . '<br>';
+                
+            ?>
+            <div class="bx bx-menu" id="menu-icon">
+                
+                 <a href="../php/logout.php" class="user"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+                
+                
+            </div>
+            <?php
+            } else {
+                // If the user is not logged in, display the Login and Register links
+            ?>
+            <a href="../php/login.php" class="user"><i class="fa-solid fa-user"></i>Login</a>
+            <a href="../php/register.php" class="user"><i class="fa-solid fa-user-plus"></i>Register</a>
             <div class="bx bx-menu" id="menu-icon"></div>
+            <?php
+            }
+            ?>
         </div>
         <!--Start Search Bar-->
         <div class="Search-Bar">
@@ -56,6 +82,27 @@
     <!--End Search Bar-->
     </header>
     <!-- End header -->
-    
+     <div class="browse">
+        <div class="producr">
+        <?php
+            $mysqli =new mysqli('localhost','id20451569_cadi_db','qzpm_QZPM_10')or die($mysqli->connect_error); 
+            $table='cpu';
+            $res=$mysqli->query("SELECT * FROM $table");
+             /*
+            while($data =$res->fetch_assoc())
+            {
+               echo "$data['c'pu_name']";
+                echo "$data['cores']";
+                echo "$data['clock']";
+                echo "$data['watt']'";
+                echo "$data['price']";
+                echo "<img src='{$data['cpu_name']}'/>";
+            }
+            */
+        ?>
+
+        </div>
+
+    </div>
 </body>
 </html>

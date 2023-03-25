@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+<?php
+// Start the session
+session_start();
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -24,6 +28,7 @@
     <header>
         <a href="../php/main-manu.php"  class="logo"><img src="../images/Cadi Logo.png" alt="Logo"></a>
             <!-- Start Unordered list  -->
+         
             <ul class="navbar">
                 <li><a href="../php/Builder.php">Builder 
                     <i class="fa-solid fa-screwdriver-wrench"></i>
@@ -38,10 +43,27 @@
                     <i class="fa-solid fa-envelope"></i>
                 </a></li>
             </ul>
-        <div class="main">
-            <a href="../php/Login Form.php" class="user"><i class="fa-solid fa-user"></i>Login</a>
-            <a href="../php/Registertion Form.php" class="user"><i class="fa-solid fa-user-plus"></i>Register</a>
+<div class="main">
+            <?php
+            
+            // Check if the user is logged in
+            
+            if (isset($_SESSION["user_id"]) && isset($_SESSION["user_name"])) {
+                // If the user is logged in, hide the Login and Register links
+                echo 'Welcome :' . $_SESSION["user_name"] . '<br>';
+                
+            ?>
+            <div class="bx bx-menu" id="menu-icon"> <a href="../php/logout.php"  class="fa fa-sign-out" aria-hidden="true"><i class="fa-solid fa-user"></i>Login</a></div>
+            <?php
+            } else {
+                // If the user is not logged in, display the Login and Register links
+            ?>
+            <a href="../php/login.php" class="user"><i class="fa-solid fa-user"></i>Login</a>
+            <a href="../php/register.php" class="user"><i class="fa-solid fa-user-plus"></i>Register</a>
             <div class="bx bx-menu" id="menu-icon"></div>
+            <?php
+            }
+            ?>
         </div>
         <!--Start Search Bar-->
         <div class="Search-Bar">

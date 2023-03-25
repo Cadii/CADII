@@ -63,6 +63,8 @@
 
 .label1{
     transition: 0.3s;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .label1:hover{
@@ -70,16 +72,25 @@
 }
 
 .input1{
-    margin-left: 10px;
+    margin-left: 83px;
 }
 .input2{
-    margin-left:  21px;
+    margin-left:  83px;
 }
 .input3{
-    margin-left:  45px;
+    margin-left: 2px;
 }
 .input4{
-    margin-left: 87px;
+    margin-left: 92px;
+}
+.input5{
+    margin-left: 103px;
+}
+.input6{
+    margin-left: 10px;
+}
+.inputl{
+    margin-left: 73px;
 }
 .formfather{
     background-color: #eee;
@@ -94,7 +105,7 @@
 .form{
     background-color: #2c4755;
     width: 400px;
-    height: 570px;
+    height: 580px;
     padding-left: 50px;
     padding-top: 20px;
     padding-bottom: 20px;
