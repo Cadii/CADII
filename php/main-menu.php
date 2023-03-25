@@ -50,7 +50,7 @@ session_start();
             
             if (isset($_SESSION["user_id"]) && isset($_SESSION["user_name"])) {
                 // If the user is logged in, hide the Login and Register links
-                echo 'Welcome :' . $_SESSION["user_name"] . '<br>';
+                echo 'Welcome:' . $_SESSION["user_name"] . '<br>';
                 
             ?>
             <div class="bx bx-menu" id="menu-icon"> <a href="../php/logout.php"  class="fa fa-sign-out" aria-hidden="true"><i class="fa-solid fa-user"></i>Login</a></div>
