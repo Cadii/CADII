@@ -1,0 +1,159 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+body{
+    min-height: 100vh;
+    /* background-color: #0072C6;
+    background-image: linear-gradient(to right bottom, #0072C6, #1C86D1, #4498DC, #73AAE7, #A5C4F2);
+    background-size: cover; */
+    font-family: Arial, sans-serif;
+}
+
+/*Start Search-Bar */
+.search{
+    position : relative;
+    height: 50px;
+}
+.search .input{
+    border: 2px solid transparent;
+    font-size: 18px;
+    padding: 10px;
+    height: 40px;
+    width: 550px;
+    outline: none;
+    border-radius: 50px;
+    background: #fff;
+    color: black;
+    transition: 0.3s;
+    margin-left: 35%;
+    /* margin-top: 35px; */
+}
+.search .input:hover{
+    border: 2px solid #1189c5;
+    border-radius: 50px;
+}
+.search .btn{
+    border: 0;
+    background-color: #1189c5;
+    color: #fdf2e9;
+    border-radius: 50px;
+    position: absolute;
+    font-size: 24px;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    margin-left: 65.5%;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+/*End Search-Bar */
+
+.space{
+    height: 20px;
+}
+
+.container{
+    background-color: #eee;
+    height: 165px;
+}
+
+h2{
+    padding: 10px;
+    font-size: 36px;
+    color: #1189c5;
+    text-shadow: 2px 2px #eee;
+    text-align: center;
+}
+
+/* Start Features */
+.components{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+    /* background-image: url(../images/Back.jpg) ;
+    background-size: cover; */
+}
+
+.components .containerr{
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    gap: 20px;
+}
+
+.components .feat{
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    background-color: #1189c5;
+    border-radius: 10px;
+}
+
+.components .containerr .feat i{
+    color: var(--main-color);
+    width: 100px;
+}
+
+.components .feat h3{
+    font-weight: 800px;
+    margin: 30px 0;
+    color: #eee;
+    transition: 0.3s;
+    width: 35%;
+    margin: auto;
+}
+
+.components .feat h3:hover{
+    padding: 10px;
+    background-color: #eee;
+    color: #1189c5;
+    border: 3px solid transparent;
+    border-radius: 10px;
+}
+
+.components .feat p{
+    line-height: 1.8;
+    color: #eee;
+    font-size: 17px;
+    text-align: left;
+}
+
+.components .feat p a{
+    color: #eee;
+}
+/* End Features */
+
+/* Start Footer */
+.footer{
+    background-color: #2c4755;
+    color: white;
+    padding: 30px 10px;
+    text-align: center;
+    font-size: 20px;
+    height: 50px;
+}
+.footer span{
+    color: #10cab7;
+    font-weight: bold;
+}
+/* End Footer */
+.top{
+    border: 2px solid #eee;
+    color: #eee;
+    border-radius: 50px;
+    background-color: #2c4755;
+    margin: 5px;
+    padding: 10px;
+    float: right;
+    transition: 0.3s;
+}
+.top:hover{
+    border: 2px solid #2c4755;
+    background-color: #eee;
+    color: #2c4755;
+    cursor: pointer;
+}
